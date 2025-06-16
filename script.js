@@ -43,6 +43,8 @@ document.addEventListener("DOMContentLoaded", () => {
     li.appendChild(removeBtn);
     taskList.appendChild(li);
 
+    taskInput.value = "";
+
     if (save) {
       const storedTasks = JSON.parse(localStorage.getItem("tasks") || "[]");
       storedTasks.push(taskText);
